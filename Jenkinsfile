@@ -11,6 +11,7 @@ pipeline {
     post {
         success {
             sh '''
+            pip3 install codecarbon
             codecarbon init
             codecarbon monitor
             '''
