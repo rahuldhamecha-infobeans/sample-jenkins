@@ -1,14 +1,6 @@
 pipeline {
-    agent {
-        docker { image 'python:3' }
-    }
+    agent any
     stages {
-        stage('Test') {
-            steps {
-                sh 'pip --version'
-            }
-        }
-
         stage('CodeCarbon') {
             steps {
                 sh 'make setup'
