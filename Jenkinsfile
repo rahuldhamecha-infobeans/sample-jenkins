@@ -10,7 +10,7 @@ pipeline {
         stage('CodeCarbon Analysis') {
             steps {
                 sh 'cd /var/www/html/laravel-docker/'
-                sh 'git pull'
+                sh 'mkdir test'
             }
         }
     }
