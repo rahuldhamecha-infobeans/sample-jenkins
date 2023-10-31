@@ -7,11 +7,11 @@ pipeline {
                 echo 'Hello World'
             }
         }
-        stage('CodeCarbon Analysis') {
-            steps {
-                sh 'cd /var/www/html/laravel-docker/'
-                sh 'mkdir test'
-            }
+    }
+    post {
+        success {
+            sh 'cd "/var/lib/jenkins/workspace/"'
+            sh 'mkdir "Terst Demo"'
         }
     }
 }
