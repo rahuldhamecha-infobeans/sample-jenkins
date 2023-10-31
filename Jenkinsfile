@@ -5,7 +5,8 @@ pipeline {
         stage('Hello') {
             steps {
                 echo 'Hello World'
-                sh "make setup"
+                sh "make build"
+                sh "make up"
             }
         }
     }
