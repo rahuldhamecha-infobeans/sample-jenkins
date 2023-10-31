@@ -2,20 +2,10 @@ pipeline {
     agent {
         docker { image 'python:3' }
     }
-
     stages {
-        stage('Hello') {
+        stage('Test') {
             steps {
-                echo 'Hello World'
-            }
-        }
-        stage('Code Carbon') {
-            steps {
-                sh '''
-                pip install codecarbon
-                codecarbon init
-                codecarbon monitor
-                '''
+                sh 'pip --version'
             }
         }
     }
