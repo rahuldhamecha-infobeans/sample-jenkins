@@ -10,8 +10,10 @@ pipeline {
     }
     post {
         success {
-            sh 'codecarbon init'
-            sh 'codecarbon monitor'
+            sh '''
+            codecarbon init
+            codecarbon monitor
+            '''
         }
     }
 }
