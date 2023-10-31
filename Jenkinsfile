@@ -11,7 +11,7 @@ pipeline {
 
         stage('CodeCarbon') {
             steps {
-                sh 'pip3 install codecarbon'
+                sh 'pip3 install codecarbon --user'
                 sh 'codecarbon init'
                 sh 'codecarbon monitor'
             }
