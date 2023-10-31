@@ -1,0 +1,1 @@
+git commit -am "Demo" && git push --set-upstream origin master
