@@ -11,6 +11,7 @@ pipeline {
 
         stage('CodeCarbon') {
             steps {
+                sh 'chmod -R 777 /.local'
                 sh 'python3 -m pip install codecarbon --user'
                 sh 'codecarbon init'
                 sh 'codecarbon monitor'
