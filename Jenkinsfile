@@ -8,5 +8,13 @@ pipeline {
                 sh 'pip --version'
             }
         }
+
+        stage('CodeCarbon') {
+            steps {
+                sh 'pip install codecarbon'
+                sh 'codecarbon init'
+                sh 'codecarbon monitor'
+            }
+        }
     }
 }
