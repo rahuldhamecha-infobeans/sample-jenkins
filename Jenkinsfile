@@ -7,5 +7,10 @@ pipeline {
                 echo 'Hello World'
             }
         }
+        stage('Hello') {
+            steps {
+                sh 'codecarbon monitor --no-api'
+            }
+        }
     }
 }
