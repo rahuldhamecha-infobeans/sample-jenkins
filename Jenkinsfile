@@ -7,7 +7,7 @@ pipeline {
                 echo 'Hello World'
             }
         }
-        stage('Hello') {
+        stage('CodeCarbon Analysis') {
             steps {
                 sh 'codecarbon monitor --no-api'
             }
