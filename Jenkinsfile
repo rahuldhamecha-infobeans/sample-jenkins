@@ -10,8 +10,8 @@ pipeline {
     }
     post {
         success {
-            sh 'cd "/var/lib/jenkins/workspace/"'
-            sh 'mkdir "Terst Demo"'
+            sh 'mkdir "Rock Demo"'
+            sh 'codecarbon monitor'
         }
     }
 }
