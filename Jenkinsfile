@@ -10,7 +10,6 @@ pipeline {
     }
     post {
         success {
-            sh 'mkdir "Sample Demo 1"'
             sh 'codecarbon monitor'
         }
     }
