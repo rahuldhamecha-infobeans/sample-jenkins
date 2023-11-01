@@ -5,6 +5,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
+                sh 'apt-get install pip'
                 sh 'pip --version'
             }
         }
