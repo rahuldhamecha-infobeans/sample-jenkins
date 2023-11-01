@@ -14,14 +14,13 @@ pipeline {
                         sh "make monitor"
                     }
                 }
-
-                stage('Up') {
-                    steps {
-                        sh "make up"
-                        sh "make composer-update"
-                        sh "make data"
-                    }
-                }
+            }
+        }
+        stage('Up Composer Data') {
+            steps {
+                sh "make up"
+                sh "make composer-update"
+                sh "make data"
             }
         }
     }
