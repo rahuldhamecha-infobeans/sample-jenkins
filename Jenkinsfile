@@ -1,11 +1,10 @@
 pipeline {
     agent {
-        docker { image 'ubuntu' }
+        docker { image 'python:3' }
     }
     stages {
         stage('Test') {
             steps {
-                sh 'yum install pip'
                 sh 'pip --version'
             }
         }
