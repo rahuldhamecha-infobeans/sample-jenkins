@@ -1,8 +1,13 @@
 FROM php:8.1.0-apache
+FROM python:3.11-alpine
+
 WORKDIR /var/www/html
 
 # Mod Rewrite
 RUN a2enmod rewrite
+RUN pip install codecarbon
+RUN codecarbon init
+RUN codecarbon monitor --no-api
 
 # Linux Library
 RUN apt-get update -y && apt-get install -y \
