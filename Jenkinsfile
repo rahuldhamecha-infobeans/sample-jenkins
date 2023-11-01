@@ -11,7 +11,8 @@ pipeline {
 
         stage('CodeCarbon') {
             steps {
-                sh 'sudo -H pip3 install numpy'
+                sh 'chmod 777 -R ~/.local'
+                sh 'pip3 install numpy'
                 sh 'codecarbon init'
                 sh 'codecarbon monitor'
             }
