@@ -10,7 +10,6 @@ RUN apt-get update -y && apt-get install -y \
 #RUN #a2enmod rewrite
 RUN pip install codecarbon
 RUN codecarbon init
-RUN codecarbon monitor --no-api
 
 # Linux Library
 RUN apt-get update -y && apt-get install -y \
