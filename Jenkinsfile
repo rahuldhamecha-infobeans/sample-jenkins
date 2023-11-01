@@ -13,7 +13,6 @@ pipeline {
                     steps {
                         sh "make up"
                         sh "make composer-update"
-                        sh "make data"
                         sh 'make terminate'
                     }
                 }
