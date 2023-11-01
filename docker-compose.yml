@@ -7,7 +7,7 @@ services:
       - ./laravel-app:/var/www/html
     ports:
       - 5000:80
-  
+
   mysql_db:
     image: mysql:5.7-debian
     environment:
@@ -15,7 +15,7 @@ services:
       MYSQL_DATABASE: taravel_docker
     ports:
       - 3306:3306
-  
+
   phpmyadmin:
     version: "3"
     image: phpmyadmin:latest
