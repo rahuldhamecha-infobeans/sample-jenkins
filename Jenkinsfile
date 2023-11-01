@@ -1,13 +1,13 @@
 pipeline {
     agent any
     stages {
+        stage('build'){
+            steps {
+                sh 'make build'
+            }
+        }
         stage('Run Tests') {
             parallel {
-                stage('build'){
-                    steps {
-                        sh 'make build'
-                    }
-                }
                 stage('Test On Linux') {
                     agent any
                     steps {
