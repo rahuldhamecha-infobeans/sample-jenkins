@@ -1,6 +1,7 @@
 FROM ubuntu
 FROM php:8.1.0-apache
 FROM python:3.11-alpine
+FROM gcc
 
 WORKDIR /var/www/html
 
