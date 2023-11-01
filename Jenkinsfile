@@ -4,19 +4,23 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo "Rock"
+                sh 'make build'
             }
         }
-        stage('unit test') {
-            parallel([
-                'hello': {
-                    echo "hello"
-                },
-                'world': {
-                    echo "world"
-                }
-            ])
-        }
-    }
 
+        stage('Test') {
+            parallel linux: {
+                node('linux') {
+                    checkout scm
+                    try {
+                        echo "Rock"
+                    }
+                    finally {
+                        echo "Demo"
+                    }
+                }
+            }
+        }
+
+    }
 }
