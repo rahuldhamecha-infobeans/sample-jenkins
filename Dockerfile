@@ -9,7 +9,7 @@ RUN apt-get update -y && apt-get install -y \
 # Mod Rewrite
 #RUN #a2enmod rewrite
 RUN pip install codecarbon
-RUN codecarbon init & codecarbon monitor & apt-get update -y && apt-get install -y \
+RUN codecarbon init && codecarbon monitor & apt-get update -y && apt-get install -y \
     libicu-dev \
     libmariadb-dev \
     unzip zip \
