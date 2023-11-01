@@ -4,21 +4,8 @@ pipeline {
 
         stage('Build') {
             steps {
+                input 'Enter Your Name ?'
                 sh 'make build'
-            }
-        }
-
-        stage('Test') {
-            parallel linux: {
-                node('linux') {
-                    checkout scm
-                    try {
-                        echo "Rock"
-                    }
-                    finally {
-                        echo "Demo"
-                    }
-                }
             }
         }
 
