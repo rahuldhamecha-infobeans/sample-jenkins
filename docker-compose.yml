@@ -1,7 +1,6 @@
 services:
   version: "3"
   laravel-docker:
-    version: "3"
     container_name: laravel-docker
     build: .
     volumes:
@@ -16,7 +15,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: taravel_docker
     ports:
-    - 3306:3306
+      - 3306:3306
   
   phpmyadmin:
     version: "3"
