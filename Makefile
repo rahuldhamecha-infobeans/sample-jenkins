@@ -14,5 +14,6 @@ data:
 	docker exec laravel-docker1 bash -c "php artisan migrate"
 	docker exec laravel-docker1 bash -c "php artisan db:seed"
 monitor:
+	docker exec laravel-docker1 bash -c "codecarbon init"
 	docker exec laravel-docker1 bash -c "codecarbon monitor"
 

@@ -1,13 +1,28 @@
 pipeline {
     agent any
     stages {
+        stage('Run Tests') {
+            parallel {
+                stage('build'){
+                    steps {
+                        sh 'make build'
+                    }
+                }
+                stage('Test On Linux') {
+                    agent any
+                    steps {
+                        sh "make monitor"
+                    }
+                }
 
-        stage('Build') {
-            steps {
-                input 'Enter Your Name ?'
-                sh 'make build'
+                stage('Up') {
+                    steps {
+                        sh "make up"
+                        sh "make composer-update"
+                        sh "make data"
+                    }
+                }
             }
         }
-
     }
 }
