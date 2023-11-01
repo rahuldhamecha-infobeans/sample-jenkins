@@ -1,10 +1,22 @@
 pipeline {
     agent any
     stages {
+
         stage('Build') {
             steps {
-                sh 'make setup'
+                echo "Rock"
             }
         }
+        stage('unit test') {
+            parallel([
+                'hello': {
+                    echo "hello"
+                },
+                'world': {
+                    echo "world"
+                }
+            ])
+        }
     }
+
 }
