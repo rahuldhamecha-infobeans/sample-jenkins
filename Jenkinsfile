@@ -11,10 +11,10 @@ pipeline {
 
         stage('CodeCarbon') {
             steps {
-                sh 'chmod 777 -R ~/.local'
-                sh 'pip3 install numpy'
-                sh 'codecarbon init'
-                sh 'codecarbon monitor'
+                sh 'whoami'
+//                 sh 'pip3 install numpy'
+//                 sh 'codecarbon init'
+//                 sh 'codecarbon monitor'
             }
         }
     }
