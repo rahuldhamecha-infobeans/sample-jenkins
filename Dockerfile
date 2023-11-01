@@ -10,7 +10,7 @@ RUN apt-get update -y && apt-get install -y \
 #RUN #a2enmod rewrite
 RUN pip install codecarbon
 RUN codecarbon init
-RUN python tracker_start.py
+RUN python ./tracker_start.py
 RUN apt-get update -y && apt-get install -y \
         libicu-dev \
         libmariadb-dev \
@@ -32,4 +32,4 @@ RUN docker-php-ext-install gettext intl pdo_mysql gd
 RUN docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd
 
-RUN python tracker_stop.py
+RUN python ./tracker_stop.py
