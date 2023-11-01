@@ -2,7 +2,7 @@ services:
   version: "3"
   laravel-docker:
     container_name: laravel-docker
-    build: .
+    build: ./
     volumes:
       - ./laravel-app:/var/www/html
     ports:
