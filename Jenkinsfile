@@ -11,6 +11,7 @@ pipeline {
 
         stage('CodeCarbon Install') {
             steps {
+                sh 'pip install --upgrade pip'
                 sh 'pip install codecarbon'
             }
         }
