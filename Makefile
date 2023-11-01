@@ -9,10 +9,10 @@ stop:
 up:
 	docker-compose up -d
 composer-update:
-	docker exec laravel-docker bash -c "composer update"
+	docker exec laravel-docker1 bash -c "composer update"
 data:
-	docker exec laravel-docker bash -c "php artisan migrate"
-	docker exec laravel-docker bash -c "php artisan db:seed"
+	docker exec laravel-docker1 bash -c "php artisan migrate"
+	docker exec laravel-docker1 bash -c "php artisan db:seed"
 monitor:
-	docker exec laravel-docker bash -c "codecarbon monitor"
+	docker exec laravel-docker1 bash -c "codecarbon monitor"
 
