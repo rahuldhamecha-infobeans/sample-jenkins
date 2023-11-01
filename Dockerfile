@@ -1,9 +1,10 @@
-FROM ubuntu
 FROM php:8.1.0-apache
-FROM python:3.11-alpine
-FROM gcc
 
 WORKDIR /var/www/html
+
+RUN apt-get update -y && apt-get install -y \
+    python3.11 \
+    pip
 
 # Mod Rewrite
 #RUN #a2enmod rewrite
