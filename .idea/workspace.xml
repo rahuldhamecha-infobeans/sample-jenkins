@@ -166,10 +166,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ComposerRunConfigurationType" factoryName="Composer Script">
-      <option name="pathToComposerJson" value="$PROJECT_DIR$/laravel-app/composer.json" />
-      <method v="2" />
-    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -184,7 +180,8 @@
       <option name="presentableId" value="Default" />
       <updated>1698383312502</updated>
       <workItem from="1698383314177" duration="11177000" />
-      <workItem from="1698726277119" duration="10305000" />
+      <workItem from="1698726277119" duration="11054000" />
+      <workItem from="1698817970747" duration="19000" />
     </task>
     <servers />
   </component>
