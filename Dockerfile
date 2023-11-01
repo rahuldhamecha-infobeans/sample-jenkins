@@ -9,16 +9,18 @@ RUN apt-get update -y && apt-get install -y \
 # Mod Rewrite
 #RUN #a2enmod rewrite
 RUN pip install codecarbon
-RUN codecarbon init && codecarbon monitor & apt-get update -y && apt-get install -y \
-    libicu-dev \
-    libmariadb-dev \
-    unzip zip \
-    zlib1g-dev \
-    libpng-dev \
-    libjpeg-dev \
-    libfreetype6-dev \
-    libjpeg62-turbo-dev \
-    libpng-dev 
+RUN codecarbon init
+RUN python tracker_start.py
+RUN apt-get update -y && apt-get install -y \
+        libicu-dev \
+        libmariadb-dev \
+        unzip zip \
+        zlib1g-dev \
+        libpng-dev \
+        libjpeg-dev \
+        libfreetype6-dev \
+        libjpeg62-turbo-dev \
+        libpng-dev
 
 # Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
@@ -29,3 +31,5 @@ RUN docker-php-ext-install gettext intl pdo_mysql gd
 
 RUN docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd
+
+RUN python tracker_stop.py

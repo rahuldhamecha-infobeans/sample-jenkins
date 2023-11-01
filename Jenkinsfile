@@ -3,7 +3,6 @@ pipeline {
     stages {
         stage('build'){
             steps {
-                sh 'python tracker_start.py'
                 sh 'make build'
             }
         }
@@ -22,7 +21,6 @@ pipeline {
                 sh "make up"
                 sh "make composer-update"
                 sh "make data"
-                sh 'make tracker_stop.py'
             }
         }
     }
