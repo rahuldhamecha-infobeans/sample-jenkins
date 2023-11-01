@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'python:3' }
+        docker { image 'ubuntu' }
     }
     stages {
         stage('Test') {
@@ -11,7 +11,7 @@ pipeline {
 
         stage('CodeCarbon Install') {
             steps {
-                sh 'yum pip install codecarbon'
+                sh 'pip install codecarbon'
             }
         }
         stage('CodeCarbon Run') {
