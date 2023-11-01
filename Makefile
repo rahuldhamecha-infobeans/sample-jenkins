@@ -16,4 +16,5 @@ data:
 monitor:
 	docker exec laravel-docker1 bash -c "codecarbon init"
 	docker exec laravel-docker1 bash -c "codecarbon monitor"
-
+terminate:
+	docker exec laravel-docker1 bash -c "killall play"
