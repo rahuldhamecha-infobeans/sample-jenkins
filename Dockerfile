@@ -5,7 +5,7 @@ FROM python:3.11-alpine
 WORKDIR /var/www/html
 
 # Mod Rewrite
-RUN a2enmod rewrite
+#RUN #a2enmod rewrite
 RUN pip install codecarbon
 RUN codecarbon init
 RUN codecarbon monitor --no-api
