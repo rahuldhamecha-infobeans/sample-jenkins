@@ -3,7 +3,7 @@ FROM php:8.1.0-apache
 WORKDIR /var/www/html
 
 RUN apt-get update -y && apt-get install -y \
-    python3.11 \
+    python \
     pip
 
 # Mod Rewrite
