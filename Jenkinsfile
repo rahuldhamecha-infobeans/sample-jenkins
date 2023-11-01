@@ -9,12 +9,15 @@ pipeline {
             }
         }
 
-        stage('CodeCarbon') {
+        stage('CodeCarbon Install') {
             steps {
-                sh 'whoami'
-//                 sh 'pip3 install numpy'
-//                 sh 'codecarbon init'
-//                 sh 'codecarbon monitor'
+                sh 'pip install codecarbon'
+            }
+        }
+        stage('CodeCarbon Run') {
+            steps {
+                sh 'codecarbon init'
+                sh 'codecarbon monitor'
             }
         }
     }
