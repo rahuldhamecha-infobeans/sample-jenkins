@@ -1,3 +1,3 @@
-from codecarbon import EmissionsTracker
-tracker = EmissionsTracker(project_name="test_demo", measure_power_secs=5,save_to_file=True)
+from codecarbon import OfflineEmissionsTracker
+tracker = OfflineEmissionsTracker(country_iso_code="IND")
 tracker.start()

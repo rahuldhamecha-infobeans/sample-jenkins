@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('install dependencies') {
+        stage('Code Carbon Package Install and Tracker Start') {
             steps {
                 sh 'python3 --version'
                 sh 'python3 -m pip install codecarbon --user'
@@ -10,12 +10,13 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'make build'
+                sh 'make setup'
             }
         }
         stage('Stop Tracker') {
             steps {
                 sh 'python3 tracker_stop.py'
+                sh 'cp emission.csv /var/www/html/laravel-docker/'
             }
         }
     }
