@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Test Build') {
             steps {
-                sh 'python abc.py'
+                sh 'python tracker_start.py'
             }
         }
     }
