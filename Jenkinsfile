@@ -16,7 +16,7 @@ pipeline {
         stage('Stop Tracker') {
             steps {
                 sh 'python3 tracker_stop.py'
-                sh 'cp emission.csv /var/www/html/laravel-docker/'
+                sh 'cp emissions.csv /var/www/html/laravel-docker/'
             }
         }
     }
