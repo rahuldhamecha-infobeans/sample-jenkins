@@ -2,10 +2,6 @@ FROM php:8.1.0-apache
 
 WORKDIR /var/www/html
 
-RUN apt-get update -y && apt-get install -y \
-    python \
-    pip
-
 # Mod Rewrite
 #RUN #a2enmod rewrite
 RUN apt-get update -y && apt-get install -y \
