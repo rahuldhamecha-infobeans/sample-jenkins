@@ -1,9 +1,11 @@
 pipeline {
-    agent any
+    agent {
+        docker { image 'python:3.10-buster' }
+    }
     stages {
-        stage('Test Build') {
+        stage('install dependencies') {
             steps {
-                sh 'python tracker_start.py'
+                sh 'python -m pip install codecarbon'
             }
         }
     }
