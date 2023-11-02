@@ -3,9 +3,9 @@ pipeline {
     stages {
         stage('install dependencies') {
             steps {
-                sh 'curl -sS https://bootstrap.pypa.io/get-pip.py | python3.11'
-                sh 'python3.10 -m pip --version'
-                sh 'python3.10 -m pip install --upgrade pip'
+                sh 'curl -sS https://bootstrap.pypa.io/get-pip.py | python3.11 --user'
+                sh 'python3.11 -m pip --version --user'
+                sh 'python3.11 -m pip install --upgrade pip --user'
                 sh 'pip install codecarbon --user'
             }
         }
