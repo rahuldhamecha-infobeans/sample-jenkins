@@ -1,11 +1,9 @@
 pipeline {
-    agent {
-        docker { image 'python:3.10-buster' }
-    }
+    agent any
     stages {
         stage('install dependencies') {
             steps {
-                sh 'python -m pip install codecarbon'
+                sh 'conda install codecarbon'
             }
         }
     }
