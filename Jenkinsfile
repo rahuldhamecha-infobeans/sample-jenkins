@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('install dependencies') {
             steps {
-                sh 'python --version'
-                sh 'pip install codecarbon --user'
+                sh 'python3 --version'
+                sh 'python3 -m pip install codecarbon --user'
             }
         }
     }
