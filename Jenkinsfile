@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('install dependencies') {
             steps {
-                sh 'pip install codecarbon --user'
+                sh 'python -m pip install codecarbon --user'
             }
         }
     }
