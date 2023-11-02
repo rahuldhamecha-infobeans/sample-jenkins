@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('install dependencies') {
             steps {
-                sh 'conda install codecarbon'
+                sh 'pip install codecarbon --user'
             }
         }
     }
