@@ -1,8 +1,10 @@
 pipeline {
     agent any
     stages {
-        stage('Run Tests') {
-            sh 'python abc.py'
+        stages('Test Build') {
+            steps {
+                sh 'python abc.py'
+            }
         }
     }
 }
