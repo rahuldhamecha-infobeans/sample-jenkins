@@ -17,7 +17,7 @@ pipeline {
             steps {
                 sh 'python3 tracker_stop.py'
                 sh 'chmod 777 emissions.csv'
-                sh 'cp emissions.csv /var/www/html/laravel-docker/'
+                sh 'cp emissions.csv /var/www/learning/spam-ham-demo/uploads/'
             }
         }
     }
