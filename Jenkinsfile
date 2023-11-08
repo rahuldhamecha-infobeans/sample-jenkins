@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Code Carbon Package Install and Tracker Start') {
+        stage('Start Tracker') {
             steps {
                 sh 'python3 --version'
                 sh 'python3 -m pip install codecarbon --user'
